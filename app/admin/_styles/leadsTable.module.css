@@ -23,11 +23,12 @@
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--grey);
   text-align: left;
-  div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+}
+
+.tableHeadCellInner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .tableBodyRow:hover {
   background-color: var(--grey);
