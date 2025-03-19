@@ -2,7 +2,7 @@
 
 - Will be deployed to Vercel, link provided here:
 
-https://alma-test-task-8jrlsh15b-essanchos-projects.vercel.app/
+https://alma-test-task.vercel.app/
 
 - I have used Supabase as database and auth provider
 - Won't run locally without the API keys, I can provide them if needed
