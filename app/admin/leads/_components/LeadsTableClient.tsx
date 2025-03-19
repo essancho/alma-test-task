@@ -64,25 +64,25 @@ export const LeadsTableClient = ({ leads }: Props) => {
                 </div>
               </th>
               <th className={styles.tableHeadCell}>
-                <div>
+                <div className={styles.tableHeadCellInner}>
                   <span>Email</span>
                   <BsArrowDown />
                 </div>
               </th>
               <th className={styles.tableHeadCell}>
-                <div>
+                <div className={styles.tableHeadCellInner}>
                   <span>Country</span>
                   <BsArrowDown />
                 </div>
               </th>
               <th className={styles.tableHeadCell}>
-                <div>
+                <div className={styles.tableHeadCellInner}>
                   <span>Status</span>
                   <BsArrowDown />
                 </div>
               </th>
               <th className={styles.tableHeadCell}>
-                <div>
+                <div className={styles.tableHeadCellInner}>
                   <span>Created</span>
                   <BsArrowDown />
                 </div>

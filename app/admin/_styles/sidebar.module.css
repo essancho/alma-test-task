@@ -23,21 +23,22 @@
   align-items: center;
   justify-content: start;
   position: relative;
-  ::after {
-    content: "";
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-    left: -50%;
-    top: -70%;
-    width: 150%;
-    aspect-ratio: 1/1;
-    background: radial-gradient(
-      circle,
-      rgba(34, 197, 94, 0.3) 0%,
-      rgba(255, 255, 255, 0) 70%
-    );
-  }
+}
+
+.logoContainer::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  left: -50%;
+  top: -70%;
+  width: 150%;
+  aspect-ratio: 1/1;
+  background: radial-gradient(
+    circle,
+    rgba(34, 197, 94, 0.3) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
 
 .logoBackground {
