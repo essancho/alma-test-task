@@ -1,0 +1,129 @@
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 5rem;
+}
+.table {
+  min-width: 100%;
+  background: none;
+  border: 1px solid var(--grey);
+  border-radius: 15px;
+  border-collapse: separate;
+  border-spacing: 0;
+  cursor: default;
+  overflow: hidden;
+}
+.tableHeadRow {
+  font-weight: 400;
+  color: var(--grey);
+  text-align: left;
+}
+.tableHeadCell {
+  font-weight: 300;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--grey);
+  text-align: left;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.tableBodyRow:hover {
+  background-color: var(--grey);
+}
+.tableBodyRowCell {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--grey);
+}
+
+.tableBodyRow:last-child .tableBodyRowCell {
+  /* border-bottom: none; */
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.searchInput {
+  color: var(--grey);
+  padding: 8px 12px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.statusFilter {
+  padding: 8px 15px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.pageButtons {
+  display: flex;
+  gap: 5px;
+}
+
+.pageButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid var(--grey);
+  background-color: white;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.pageButtonControl {
+  border: none;
+}
+
+.pageButton:hover {
+  background-color: var(--grey);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.activePageButton {
+  color: #393939;
+  border-color: #393939;
+}
+
+.activePageButton:hover {
+  background-color: var(--grey);
+}
+
+.emptyState {
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--grey);
+}
+

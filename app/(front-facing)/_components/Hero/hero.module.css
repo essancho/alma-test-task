@@ -1,0 +1,36 @@
+.wrapper {
+  position: relative;
+  background: var(--highlight);
+  background-image: url(@/assets/circles.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: fit;
+  height: 360px;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  z-index: 100;
+}
+.container {
+  max-width: 1144px;
+  height: 100%;
+  margin: 0 auto;
+}
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container h1 {
+  text-transform: capitalize;
+  font-size: 4rem;
+  white-space: pre-wrap;
+}
+

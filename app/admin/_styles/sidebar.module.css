@@ -1,0 +1,177 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid var(--grey);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background: white;
+}
+
+.logoContainer {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  ::after {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    left: -50%;
+    top: -70%;
+    width: 150%;
+    aspect-ratio: 1/1;
+    background: radial-gradient(
+      circle,
+      rgba(34, 197, 94, 0.3) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+}
+
+.logoBackground {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.logoText {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  z-index: 2;
+  position: relative;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  padding: 0.75rem 1.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.navItem:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.activeNavItem {
+  background-color: var(--grey);
+  color: #111827;
+  font-weight: 600;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.mobileMenuButton {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+  }
+
+  .overlayVisible {
+    display: block;
+  }
+}
+
+.sidebarFooter {
+  margin-top: auto;
+
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.signOutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 300px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.signOutButton:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.signOutButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.4);
+}
+
+.signOutIcon {
+  margin-right: 0.5rem;
+}
+
